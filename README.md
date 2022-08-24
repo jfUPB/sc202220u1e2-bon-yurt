@@ -1,7 +1,7 @@
 # EVALUACION EQUIPO BON YURT
 
-- j
--
+- Juan Simon Hurtado ID: 422011
+- Juana 
 - j
 
 MEMORY[16] = 16384;
