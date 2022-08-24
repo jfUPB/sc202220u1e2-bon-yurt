@@ -24,16 +24,16 @@
 	D;JEQ
 	@START
 	0;JMP
-
+//si la tecla es 0 llena la pantalla
 (FILL)
 	@value
-	M = -1
+	M = -1 //el valor de la posicion 16 se pone en -1
 	@DRAW
 	0;JMP
-
+//si la tecla es 1 vacia la pantalla
 (CLEAR)
 	@value
-	M = 0
+	M = 0 //el valor de la posicion 16 se pone en 0
 	@DRAW
 	0;JMP
 
@@ -42,7 +42,7 @@
 	D = A
 	@i
 	M = D
-
+//llena la pantalla según el valor que hay en la posicion 16 (lo llena porcion por porcion)
 (LOOP)
 	@value
 	D = M
@@ -57,5 +57,5 @@
 	D = M - D
 	@LOOP
 	D;JNE
-	@START
+	@START//loop infinito
 	0;JMP
