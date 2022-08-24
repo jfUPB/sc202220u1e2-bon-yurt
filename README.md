@@ -1,49 +1,38 @@
 # EVALUACION EQUIPO BON YURT
 
 - Juan Simon Hurtado ID: 422011
-- Juana 
-- j
+- Juana Valentina Rico ID: 436633
+- David Marin Yepes ID: 422695
 
-MEMORY[16] = 16384;
 
-MEMORY[0] = 78;
+//Código en C/C++
 
-MEMORY[1] = 66;
+	MEMORY[0] = 78;
 
-while (true)
+	MEMORY[1] = 66;
+	//simulador de lo que pusimos manualmente en las posición 0 y 1 de la RAM
 
-{
+	while (true)
 
-    if (MEMORY[KEYBOARD] == 0)
-    
-        {
-    
-        if ((MEMORY[16] - 16384) > 0)
-        
-        {
-        
-            MEMORY[16] = MEMORY[16] - 1;
-            
-            MEMORY[MEMORY[16]] = 0xFFFF;
-        }
-    }
-    else
-    {
-        if (MEMORY[KEYBOARD] == MEMORY[0])
-          {
-            if ((MEMORY[16] - 24576) < 0)
-              {
-                MEMORY[MEMORY[16]] = 0x0000;
-                MEMORY[16] = MEMORY[16] + 1;
-              }
-          }
-        if (MEMORY[KEYBOARD] == MEMORY[1])
-          {
-            if ((MEMORY[16] - 24576) < 0)
-              {
-               MEMORY[MEMORY[16]] = 0xFFFF;
-               MEMORY[16] = MEMORY[16] + 1;
-              }
-          } 
-     }
-}
+	{
+
+	    if (MEMORY[KEYBOARD] =! 0)
+
+		{
+
+			if ((MEMORY[0] - MEMORY[KEYBOARD]) = 0)
+
+			{
+			    MEMORY[16] = MEMORY[16] - 1;
+
+			    MEMORY[MEMORY[16]] = 0xFFFF;
+			}
+			
+			else if ((MEMORY[1] - MEMORY[KEYBOARD]) = 0)
+			
+			{
+			   MEMORY[MEMORY[16]] = 0x0000;
+			   MEMORY[16] = MEMORY[16] + 1;
+			}
+		}
+	}
