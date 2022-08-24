@@ -4,7 +4,9 @@
 - Juana Valentina Rico ID: 436633
 - David Marin Yepes ID: 422695
 
-MEMORY[16] = 16384;
+//Código en C/C++
+
+MEMORY[17] = ;
 
 MEMORY[0] = 78;
 
@@ -14,20 +16,28 @@ while (true)
 
 {
 
-    if (MEMORY[KEYBOARD] == 0)
+    if (MEMORY[KEYBOARD] =! 0)
     
         {
     
-        if ((MEMORY[16] - 16384) > 0)
-        
-        {
-        
-            MEMORY[16] = MEMORY[16] - 1;
-            
-            MEMORY[MEMORY[16]] = 0xFFFF;
-        }
-    }
-    else
+		if ((MEMORY[0] - MEMORY[KEYBOARD]) = 0)
+
+		{
+		    MEMORY[16] = MEMORY[16] - 1;
+
+		    MEMORY[MEMORY[16]] = 0xFFFF;
+		}
+		else if ((MEMORY[1] - MEMORY[KEYBOARD]) = 0)
+		{
+		   MEMORY[MEMORY[16]] = 0x0000;
+                   MEMORY[16] = MEMORY[16] + 1;
+		}
+    	}
+}
+
+
+
+else
     {
         if (MEMORY[KEYBOARD] == MEMORY[0])
           {
@@ -46,7 +56,7 @@ while (true)
               }
           } 
      }
-}
+
 --
 (START)			// while (true)
 	@KBD
