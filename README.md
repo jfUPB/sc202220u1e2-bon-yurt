@@ -1,8 +1,8 @@
 # EVALUACION EQUIPO BON YURT
 
 - Juan Simon Hurtado ID: 422011
-- Juana 
-- j
+- Juana Valentina Rico ID: 436633
+- David Marin Yepes ID: 422695
 
 MEMORY[16] = 16384;
 
