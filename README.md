@@ -89,7 +89,7 @@
 		@i
 		M = D
 	
-	(LOOP)//llena la pantalla según el valor que hay en la posicion 16 (lo llena porcion por porcion), hasta que no llena los ultimos pixeles de pantalla no termina
+	(LOOP)//llena la pantalla según el valor que hay en la posicion 16 (lo llena porcion por porcion), hasta que no llena los ultimos pixeles de pantalla no termina, utiliza un while(memory[17]<24576))
 	//Esta parte del código es la que llena la pantalla ya sea de 0 o de 1
 	//desde aquí sería el mismo código que MEMORY[MEMORY[16]] = 0x0000; MEMORY[16] =  1; ó MEMORY[16] = 0; 
 	
