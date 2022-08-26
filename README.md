@@ -7,9 +7,6 @@
 
 //Código en C/C++
 
-	MEMORY[0] = 78;
-	MEMORY[1] = 66;
-	//simulador de lo que pusimos manualmente en las posición 0 y 1 de la RAM
 
 	while (true)
 	{
