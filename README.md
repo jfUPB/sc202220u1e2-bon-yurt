@@ -54,7 +54,7 @@
 	
 	(LOOP)//llena la pantalla según el valor que hay en la posicion 16 (lo llena porcion por porcion), hasta que no llena los ultimos pixeles de pantalla no termina
 	//Esta parte del código es la que llena la pantalla ya sea de 0 o de 1
-	//desde aquí sería el mismo código que MEMORY[MEMORY[16]] = 0x0000; MEMORY[16] = MEMORY[16] + 1; ó MEMORY[16] = MEMORY[16] - 1; 			    MEMORY[MEMORY[16]] = 0xFFFF;, todo depende del valor de @value
+	//desde aquí sería el mismo código que MEMORY[MEMORY[16]] = 0x0000; MEMORY[16] =  1; ó MEMORY[16] = 0;
 	
 		@value
 		D = M
@@ -82,16 +82,27 @@
 	{
 	    if (MEMORY[KEYBOARD] =! 0)
 		{
-			if ((MEMORY[0] - MEMORY[KEYBOARD]) = 0)
+			if (MEMORY[0] == MEMORY[KEYBOARD])
 			{
-			    MEMORY[16] = MEMORY[16] - 1;
-			    MEMORY[MEMORY[16]] = 0xFFFF;
+			    MEMORY[16] = -1;
 			}
 			
-			else if ((MEMORY[1] - MEMORY[KEYBOARD]) = 0)
+			else if (MEMORY[1] == MEMORY[KEYBOARD])
 			{
-			   MEMORY[MEMORY[16]] = 0x0000;
-			   MEMORY[16] = MEMORY[16] + 1;
+			   MEMORY[16] = 0;
 			}
+			else
+			{
+			  continue;
+			}
+			
+		MEMORY[17]=16384;//(screen)	
+		
+		while(MEMORY[17]<24576)
+		{
+			MEMORY[MEMORY[17]]=MEMORY[16];
+			MEMORY[17]++;
+		}
+		
 		}
 	}
